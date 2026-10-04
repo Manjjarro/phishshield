@@ -4,7 +4,7 @@ Phishing URL risk scoring with plain-language explanations — from theURL text 
 
 PhishShield reads a web address and estimates how likely it is to be aphishing link, in about a millisecond, without opening the page andwithout calling any outside service. Every score comes with the reasonsbehind it, in plain language.
 
-Live demo: (add the Streamlit Cloud URL here after deploying)
+Live demo: (https://phishshielder.streamlit.app/)
 What it's for
 
 A first check for a human: it prioritizes links for review. It shouldnever block anything on its own. On held-out testing it detects 98.4%of phishing URLs (F1 0.977, ROC-AUC 0.996) at a ~2% false-flag rate.
