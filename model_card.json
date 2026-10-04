@@ -1,0 +1,34 @@
+{
+  "model_type": "sklearn HistGradientBoostingClassifier",
+  "feature_set": "robust (16 URL-lexical features)",
+  "features_in_training_order": [
+    "url_length",
+    "hostname_length",
+    "dot_count",
+    "hyphen_count",
+    "digit_count",
+    "at_count",
+    "extra_double_slash_count",
+    "question_mark_count",
+    "equals_count",
+    "has_ip_address_host",
+    "subdomain_count",
+    "digit_ratio",
+    "has_shortener_domain",
+    "hostname_entropy",
+    "suspicious_token_count",
+    "encoded_character_count"
+  ],
+  "default_decision_threshold": 0.2,
+  "random_seed": 42,
+  "training_rows": 164759,
+  "source_dataset": "PhiUSIIL Phishing URL Dataset (Kaggle: joebeachcapital/phiusiil-phishing-url)",
+  "sklearn_version": "1.6.1",
+  "joblib_version": "1.5.3",
+  "intended_use": "Risk scoring / triage of URLs for human review; not autonomous blocking",
+  "known_limitations": [
+    "URL-lexical features only; no page content, domain age, or reputation",
+    "PhiUSIIL benign URLs are bare homepage domains, so in-dataset precision overstates precision at real-world phishing base rates",
+    "Attacks hosted on legitimate-looking domains may score low regardless of threshold (~1% of phishing URLs)"
+  ]
+}
